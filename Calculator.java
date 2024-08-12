@@ -39,12 +39,14 @@ public class Calculator
         Calculation ob=new Calculation();
 
         Scanner s=new Scanner(System.in);
+        
+        int a,b;
 
         System.out.print("Enter a:");
-        int a=s.nextInt();
-
+        a=s.nextInt();
+        
         System.out.print("Enter b:");
-        int b=s.nextInt();
+        b=s.nextInt();
 
         System.out.println("Enter Your Operation: 1.Addition 2.Subtraction 3.Multiplication 4.Division");
         int op=s.nextInt();
@@ -66,6 +68,9 @@ public class Calculator
             case 4:
             ob.Division(a, b);
             break;
+            
+            default:
+            System.out.println("Enter valid Option");
         }
     }    
 }
