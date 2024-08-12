@@ -23,6 +23,11 @@ class Student
         }
     }
 
+    protected void finalize()
+    {
+        System.out.println("Object Is Protected");
+    }
+    
     public void display()
     {
         System.out.print(this.rollno+" ");
@@ -30,12 +35,16 @@ class Student
         System.out.print(this.mark+" ");
         System.out.println();
     }
+
+
 }
 
 public class StudentDetails
 {
     public static void main(String[] args)
     {
+        for(int i=0;i<10000000;i++)
+        {
         Student dharsan=new Student(14,"Dharsan.M.B",5f);
         dharsan.display();
         Student elango=new Student(21,"Elango.V",38.21f);
@@ -46,5 +55,6 @@ public class StudentDetails
         Student hari=new Student(30,"Hari.N",8.4f);
         hari.display();
         dharsan.CheckMark();
+        }
     }
 }
