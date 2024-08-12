@@ -40,11 +40,11 @@ public class StudentDetails
         dharsan.display();
         Student elango=new Student(21,"Elango.V",38.21f);
         elango.display();
+        elango.CheckMark();
         Student john=new Student(41,"John Rohith Midhun",38.5f);
         john.display();
         Student hari=new Student(30,"Hari.N",8.4f);
         hari.display();
         dharsan.CheckMark();
-        elango.CheckMark();
     }
 }
