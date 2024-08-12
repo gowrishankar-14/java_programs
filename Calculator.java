@@ -2,28 +2,28 @@ import java.util.Scanner;
 
 class Calculation 
 {
-    public static void Addition(int a,int b)
+    public void Addition(int a,int b)
     {
         int sum=0;
         sum=a+b;
         System.out.println("Addition of "+a+"+"+b+":"+sum);
     }
 
-    public static void Subtraction(int a,int b)
+    public void Subtraction(int a,int b)
     {
         int diff=0;
         diff=a-b;
         System.out.println("Subtraction of "+a+"-"+b+":"+diff);
     }
 
-    public static void Multiplication(int a,int b)
+    public void Multiplication(int a,int b)
     {
         int product;
         product=a*b;
         System.out.println("Product of "+a+"*"+b+":"+product);
     }
 
-    public static void Division(int a,int b)
+    public void Division(int a,int b)
     {
         int div;
         div=a/b;
@@ -66,12 +66,6 @@ public class Calculator
             case 4:
             ob.Division(a, b);
             break;
-
         }
-        
-    }
-
-
-
-    
+    }    
 }
