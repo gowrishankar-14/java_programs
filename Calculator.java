@@ -1,4 +1,3 @@
-import java.nio.file.AccessDeniedException;
 import java.util.Scanner;
 
 class Calculation 
@@ -19,14 +18,14 @@ class Calculation
 
     public static void Multiplication(int a,int b)
     {
-        int product=0;
+        int product;
         product=a*b;
         System.out.println("Product of "+a+"*"+b+":"+product);
     }
 
     public static void Division(int a,int b)
     {
-        int div=0;
+        int div;
         div=a/b;
         System.out.println("Division of "+a+"/"+b+":"+div);
     }
@@ -38,11 +37,15 @@ public class Calculator
     {
 
         Calculation ob=new Calculation();
+
         Scanner s=new Scanner(System.in);
+
         System.out.print("Enter a:");
         int a=s.nextInt();
+
         System.out.print("Enter b:");
         int b=s.nextInt();
+
         System.out.println("Enter Your Operation: 1.Addition 2.Subtraction 3.Multiplication 4.Division");
         int op=s.nextInt();
 
