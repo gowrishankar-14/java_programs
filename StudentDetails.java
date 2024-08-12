@@ -32,6 +32,5 @@ public class StudentDetails
         john.display();
         Student hari=new Student(30,"Hari.N",8.4f);
         hari.display();
-        
     }
 }
