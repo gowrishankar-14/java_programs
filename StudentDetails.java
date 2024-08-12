@@ -1,8 +1,8 @@
 class Student
 {
-    static int rollno;
-    static String name;
-    static float mark;
+     int rollno;
+     String name;
+     float mark;
 
     Student(int regno,String names,float marks)
     {
