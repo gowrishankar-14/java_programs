@@ -11,6 +11,18 @@ class Student
         this.mark=marks;
     } 
 
+    boolean CheckMark()
+    {
+        if(this.mark>=35)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public void display()
     {
         System.out.print(this.rollno+" ");
@@ -24,13 +36,15 @@ public class StudentDetails
 {
     public static void main(String[] args)
     {
-        Student dharsan=new Student(14,"Dharsan.M.B",8.35f);
+        Student dharsan=new Student(14,"Dharsan.M.B",5f);
         dharsan.display();
-        Student elango=new Student(21,"Elango.V",8.21f);
+        Student elango=new Student(21,"Elango.V",38.21f);
         elango.display();
-        Student john=new Student(41,"John Rohith Midhun",8.5f);
+        Student john=new Student(41,"John Rohith Midhun",38.5f);
         john.display();
         Student hari=new Student(30,"Hari.N",8.4f);
         hari.display();
+        dharsan.CheckMark();
+        elango.CheckMark();
     }
 }
