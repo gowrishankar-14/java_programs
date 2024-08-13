@@ -3,6 +3,7 @@ class Student
      int rollno;
      String name;
      float mark;
+     private int pass_mark=35;
 
     Student(int regno,String names,float marks)
     {
@@ -13,7 +14,7 @@ class Student
 
     boolean CheckMark()
     {
-        if(this.mark>=35)
+        if(this.mark>=pass_mark)
         {
             return true;
         }
