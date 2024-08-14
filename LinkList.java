@@ -19,7 +19,10 @@ class LinkedList
         head=null;
     }
     
-    public void insert1st(int val)
+    
+    //insertion
+    
+    public void insert1st(int val)   //insert at first
     {
         Node new_node=new Node(val);
         
@@ -34,7 +37,30 @@ class LinkedList
         }
     }
     
-    public void insertlast(int val)
+    public void insertatpos(int val,int pos)   //insert at desired position
+    {
+        Node newNode=new Node(val);
+        if(pos==1)
+        {
+            newNode.next=head;
+            head=newNode;
+        }
+        Node current=head;
+        int currentindex=1;
+        
+        while(current!=null && currentindex<pos-1)
+        {
+            current=current.next;
+            currentindex++;
+        }
+        if(current==null)
+        {
+            System.out.print("index out of bound");
+        }
+        newNode.next=current.next;
+        current.next=newNode;
+    }
+    public void insertlast(int val)   //insert at last 
     {
         Node new_node=new Node(val);
         
@@ -54,7 +80,16 @@ class LinkedList
         }
     }
     
-    public void display()
+    
+    //deletion
+    
+    public void delfirst()
+    {
+        
+    }
+    
+    
+    public void display()      //display nodes
     {
         Node current=head;
         
@@ -66,6 +101,7 @@ class LinkedList
         
         System.out.println("Null");
     }
+    
 }
 
 
@@ -77,8 +113,9 @@ public class Main
         
         ll.insert1st(10);
         ll.insert1st(20);
-        ll.insert1st(30);
-        ll.insert1st(40);
+        
+        ll.insertatpos(30,2);
+        ll.insertatpos(40,3);
         
         ll.insertlast(70);
         ll.insertlast(80);
