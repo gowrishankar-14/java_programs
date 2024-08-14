@@ -1,6 +1,7 @@
 class LinkedList
 {
     Node head;
+    
     class Node
     {
     int data;
@@ -33,6 +34,26 @@ class LinkedList
         }
     }
     
+    public void insertlast(int val)
+    {
+        Node new_node=new Node(val);
+        
+        if(head==null)
+        {
+            head=new_node;
+        }
+        else
+        {
+            Node current=head;
+            
+            while(current.next!=null)
+            {
+                current=current.next;
+            }
+            current.next=new_node;
+        }
+    }
+    
     public void display()
     {
         Node current=head;
@@ -48,7 +69,7 @@ class LinkedList
 }
 
 
-public class LinkList
+public class Main
 {
     public static void main(String[] args)
     {
@@ -58,10 +79,10 @@ public class LinkList
         ll.insert1st(20);
         ll.insert1st(30);
         ll.insert1st(40);
+        
+        ll.insertlast(70);
+        ll.insertlast(80);
 
         ll.display();
     }
 }
-
-
-
